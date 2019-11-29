@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.head {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+    width: 100%;
+    height: 100vh;
+    background-color: #180c62;
+}
+
+header h1 {
+    color: white;
+    padding: 30px 0 0 35px;
+}
+
+.nav {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+
+.nav a {
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    transition: 0.3s;
+    color: rgb(90, 90, 90);
+}
+
+.nav a.closebtn {
+    display: none;
+}
+
+.center {
+    width: 70%;
+    height: 200px;
+    /* border: 1px solid white; */
+    margin: 10% auto;
+    text-align: center;
+}
+
+.center h1 {
+    font-size: 3.9em;
+    color: white;
+    padding: 20px 0 35px 0;
+}
+
+.center a {
+    padding-top: 20px;
+    padding: 10px 70px;
+    text-decoration: none;
+    /* background-color: whitesmoke; */
+    border: 2px solid white;
+    color: white;
+    font-size: 1.3em;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.center a:hover {
+    background-color: whitesmoke;
+    color: #111;
+    transition: 0.7s;
+
+}
+
+.head a img {
+    display: none;
+}
+
+.leaders {
+    /* clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%); */
+    /* background-color: darkorange; */
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+}
+
+.leaders h2 {
+    color: #180c62;
+    font-weight: 400;
+    margin: 4% auto;
+    font-size: 3em;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.church {
+    overflow: auto;
+}
+
+.leader {
+    width: 40%;
+    height: 100%;
+    margin-left: 5.5em;
+    margin-bottom: 3em;
+    /* margin: 20px; */
+    /* border: 2px solid black; */
+    float: left;
+}
+
+.leader img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.leader h3 {
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.leader p {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.last {
+    /* clear: both; */
+    clear: left;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.celebrant-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+    background-color: #180c62;
+}
+
+.celebrant-section h1 {
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.celebrants {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.celebrants .persons {
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.celebrants .persons img {
+    display: block;
+    margin: 3% auto;
+}
+
+.celebrants .persons h3 {
+    color: white;
+    text-align: center;
+}
+
+.celebrants .persons p {
+    text-align: center;
+}
+
+.names {
+    height: 100px;
+    background-color: red;
+    color: white;
+}
+
+.bd-pic {
+    color: white;
+    height: 100px;
+    background-color: orange;
+}
+
+.contact-us {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 26, 26);
+    /* color: #242424; */
+}
+
+.contact-us h1 {
+    color: white;
+    font-size: 2.8em;
+    text-align: center;
+    padding: .5em;
+}
+
+form .form {
+    width: 60%;
+    height: 100%;
+    /* border: 2px solid white; */
+    margin: 0em auto;
+    padding: 2em;
+}
+
+.form label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+.form label {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.5em 0;
+}
+
+.form input {
+    padding: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form textarea {
+    padding: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form button {
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    background-color: gray;
+    /* box-shadow: 2px 7px 15px 5px black; */
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+    background-color: #180c62;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one {
+    flex: 1;
+    border: 1px solid black;
+}
+
+.final-links {
+    padding: 1em;
+}
+
+.final-links h2 {
+    color: white;
+    font-size: 2em;
+    padding-left: 10px;
+}
+
+.final-links a {
+    color: rgb(26, 26, 26);
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0px 10px 10px;
+}
+
+.social {
+    padding: 1em;
+}
+
+.social h4 {
+    color: white;
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+.social p {
+    font-size: 1.1em;
+    padding-bottom: 0.6rem;
+    padding-top: 0.5rem;
+}
+
+.subscription {
+    padding: 1em;
+}
+
+.subscription h2 {
+    padding-bottom: 0.5em;
+    color: white;
+    font-size: 2em;
+}
+
+.subscription p {
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+}
+
+.subscription input {
+    padding: 0.5em;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid rgb(26, 26, 26);
+    background: none;
+    border-radius: 5px;
+}
+
+.subscription button {
+    padding: 8px 2em;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    border: 2px solid black;
+    color: white;
+    font-size: 1em;
+}
+
+.subscription button:hover {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: 2px solid rgb(26, 26, 26);
+    transition: 500ms;
+}
+
+footer p.close {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 0.7em;
+    font-size: 1.2em;
+    background-color: rgb(26, 26, 26);
+}
+
+.foot a,
+p,
+input.foot {
+    color: gray;
+}
+
+.foot input.foot {
+    border: 2px solid black;
+}
+
+/* ? CSS for the about page */
+.about {
+    width: 100%;
+    height: 100px;
+    clip-path: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.about-heading {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/books.jpg');
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-heading h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3.5rem;
+    position: absolute;
+    overflow-x: hidden;
+    top: 30%;
+    left: 100px;
+    padding-left: 30px;
+    color: white;
+    border-left: 5px solid white;
+}
+
+.about-rccg {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    /* border: 2px solid black; */
+    margin-top: 15px;
+    background-color: rgb(224, 224, 224);
+}
+
+.about-rccg h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.about-rccg p.themission {
+    color: rgb(73, 73, 73);
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.about-rccg p.themission span {
+    font-size: 2.8rem;
+    font-family: 'Times new roman', sans-serif;
+}
+
+.thechurch {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+.thechurch .items {
+    flex: 1;
+    padding: 2.5rem;
+    /* border: 2px solid red; */
+}
+
+.thechurch .items h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.thechurch .items li {
+    list-style-position: inside;
+    padding-bottom: 1rem;
+}
+
+.info-table {
+    width: 80%;
+    height: 100%;
+    margin: 3rem auto;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    /* width: 100%; */
+    padding: 1rem;
+}
+
+.weekly {
+    width: 100%;
+    height: 100%;
+    /* border:2px solid green; */
+    /* background-color:red; */
+}
+
+.weekly .programmes {
+    width: 80%;
+    height: 100%;
+    margin: 5% auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+.weekly .programmes .week {
+    flex: 1;
+    margin-left: 2%;
+    /* border:2px solid red; */
+    /* padding:1rem; */
+}
+
+.weekly h1.first {
+    text-align: center;
+    padding-top: 1.8rem;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+.week img {
+    display: block;
+    margin: 0% auto;
+}
+
+.week h1 {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.week h2 {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.week p {
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.questions {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.ques {
+    width: 80%;
+    height: 100%;
+    margin: 0% auto;
+    background-color: #ccc;
+    padding-left: 2%;
+    padding-top: 3%;
+}
+
+.ques p {
+    padding: 2% 10%;
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+.monthly {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.monthly h1 {
+    padding: 4% 0;
+    color: #111;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.camp-prog {
+    width: 80%;
+    height: 100%;
+    margin: 0% auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    padding-bottom:5%;
+}
+
+.month {
+    flex: 1;
+    text-align: center;
+}
+
+.month h2 {
+    padding: 3% 0;
+    font-size: 2rem;
+}
+
+.month p {
+    color: #111;
+    padding-bottom: 3%;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .questions {
+        padding: 0;
+        width: 100%;
+    }
+
+    .ques {
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+    }
+
+    .about {
+        box-shadow: 0px 3px 3px black;
+    }
+
+    .nav {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        display: block;
+        top: 0;
+        background-color: rgb(26, 26, 26);
+        color: white;
+        left: 0;
+        z-index: 1;
+        overflow-y: auto;
+        transition: 0.5s;
+
+    }
+
+    /* .navlink{
+        width: 100px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+    } */
+
+    .nav a {
+        padding: 20px 15px 15px 40px;
+        text-decoration: none;
+        font-size: 2em;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav a:hover {
+        color: rgb(90, 90, 90);
+    }
+
+    .nav a.closebtn {
+        display: block;
+        text-align: right;
+        width: 100%;
+        font-size: 2.5em;
+        position: static;
+        top: 10px;
+        right: 25px;
+        right: 25px;
+        padding-bottom: 30px;
+    }
+
+    /* .center{
+        margin: 30% auto;
+    } */
+    .head a img {
+        position: absolute;
+        display: block;
+        top: 29px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        float: right;
+    }
+
+    .center {
+        margin-top: 45%;
+        /* border: 2px solid black; */
+        width: 100%;
+        height: 300px;
+        text-align: center;
+    }
+
+    .center a {
+        font-size: .9em;
+    }
+
+    .leader {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-us {
+        width: 100%;
+        height: 100%;
+    }
+
+    form .form {
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+        padding-bottom: 10px;
+        /* margin-bottom: 5px; */
+    }
+
+    .one {
+        padding: 1.5em;
+
+    }
+
+    .final-links a:hover {
+        color: #4f4f4f;
+    }
+
+    footer p.close {
+        font-size: 0.9em;
+        padding: 1em;
+    }
+
+    .foot {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+
+    .foot a,
+    p,
+    input {
+        color: gray;
+    }
+
+    .foot input {
+        border: 2px solid black;
+    }
+
+    .info-table {
+        width: 100%;
+        height: 100%;
+    }
+
+    table {
+        width: 100%;
+        padding: 0;
+    }
+
+    th,
+    td {
+        padding: 0;
+    }
+
+    .about-heading h1 {
+        padding: 5px;
+        left: 40px;
+    }
+
+    .about-rccg {
+        padding: 1rem;
+    }
+
+    .about-rccg p.themission span {
+        font-size: 2.8rem;
+        font-family: 'Times new roman', sans-serif;
+    }
+
+    .weekly .programmes .week {
+        margin-bottom: 8%;
+        box-shadow: 0px 5px 5px black;
+        background-color: #ccc;
+    }
+
+    .celebrants {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+
+    .celebrants .persons {
+        width: 100%;
+        height: 100%;
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+    .camp-prog{
+        display:flex;
+        display: -webkit-flex;
+        flex-direction:column;
+    }
+    .monthly {
+        background-color: white;
+    }
+
+    .month {
+        background-color: #ccc;
+        margin-bottom: 7%;
+        flex: 1;
+        box-shadow: 0px 5px 3px black;
+    }
+}

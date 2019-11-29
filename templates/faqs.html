@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQs - RCCG City Of Excellence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" type="text/css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/rccg.png')}}" type="image/png">
+</head>
+<body>
+    <div class="head about">
+        <header>
+            <h1>RCCG COE</h1>
+        </header>
+        <div class="nav" id="nav">
+            <a href="#" class="closebtn" onclick="closenav()">&cross;</a>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('event') }}">Events</a>
+            <a href="{{ url_for('faqs') }}">FAQs</a>
+        </div>
+        <a href="#"><img src="{{ url_for('static', filename='img/menu.png')}}" onclick="opennav()"></a>
+    </div>
+    <div class="about-heading">
+        <h1>FAQs</h1>
+    </div>
+
+    <div class="questions">
+        <div class="ques">
+            <h1>Is Pastor E.A Adeboye the founder of RCCG?</h1>
+            <p><b>Answer</b>: No, he is not the founder of the RCCG. The founder of RCCG is Rev. J.O Akindayomi</p>
+        </div>
+        <div class="ques">
+            <h1>Is Pastor E.A Adeboye the founder of RCCG?</h1>
+            <p><b>Answer</b>: No, he is not the founder of the RCCG. The founder of RCCG is Rev. J.O Akindayomi</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <Footer>
+        <div class="foot">
+            <div class="final-links one">
+                <h2>Page Links</h2>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('event')}}">Events</a>
+                <a href="{{ url_for('faqs')}}">FAQs</a>
+            </div>
+            <div class="social one">
+                <h4>Contact Us</h4>
+                <p>Email : COE.RCCG@gmail.com</p>
+                <p>For Prayers Call: 0909303323, 01223233</p>
+                <p>Address: 1, Ire Agunfoye opposite Agunfoye primary school.</p>
+
+            </div>
+            <div class="subscription one">
+                <h2>Email</h2>
+                <p>Subscribe to our newsletter for upcoming events</p>
+                <form action="/About" method='POST'>
+                    <input type="text" name='email' class="foot" placeholder="Subcribe with your email">
+                    <p style="color:white; text-align:left;font-size:12px;"> {{ mess }}</p>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <p class="close">Copyright &copy; RCCG COE 2019</p>
+    </Footer>
+
+
+
+    <script>
+        function opennav() {
+            document.getElementById('nav').style.width = '80%';
+        }
+
+        function closenav() {
+            document.getElementById('nav').style.width = '0';
+        }
+    </script>
+
+</body>
+</html>

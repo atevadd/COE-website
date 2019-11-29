@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events - RCCG City of Excellence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" type=" text/css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/rccg.png')}}" type="image/png">
+</head>
+
+<body>
+    <div class="head about">
+        <header>
+            <h1>RCCG COE</h1>
+        </header>
+        <div class="nav navlink" id="nav">
+            <a href="#" class="closebtn" onclick="closenav()">&cross;</a>
+            <a href="{{ url_for('index')}}">Home</a>
+            <a href="{{ url_for('about')}}">About</a>
+            <a href="{{ url_for('event')}}">Events</a>
+            <a href="{{ url_for('faqs')}}">FAQs</a>
+        </div>
+        <a href="#"><img src="{{ url_for('static', filename='img/menu.png')}}" alt="" onclick="opennav()"></a>
+    </div>
+
+
+    <div class="about-heading">
+        <h1>Events</h1>
+    </div>
+
+    <div class="weekly">
+        <h1 class="first">Weekly Programmes</h1>
+        <div class="programmes">
+            <div class="week">
+                <h1>Digging Deep</h1>
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" width="100px" height="100px">
+                <h2>Every Tuesday</h2>
+                <p>6pm - 7pm</p>
+            </div>
+            <div class="week clear">
+                <h1>Faith Clinic</h1>
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" width="100px" height="100px">
+                <h2>Every Thursday</h2>
+                <p>6pm - 7pm</p>
+            </div>
+            <div class="week">
+                <h1>Celebration Service</h1>
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" width="100px" height="100px">
+                <h2>Every Sunday</h2>
+                <p>8am - 11:30am</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="monthly">
+        <h1 class="first">Monthly Programmes</h1>
+        <div class="camp-prog">
+            <div class="month">
+                <h2>HolyGhost Service</h2>
+                <!-- <img src="img/GO.jpeg" alt="holyghost service" width="100px" height="100px"> -->
+                <p> <b>Date:</b> Every First Monday of the Month.</p>
+                <p><b>Venue:</b> Kilometer 46, Lagos-Ibadaan Expressway.</p>
+                <p><b>Time:</b> 7pm till Midnight</p>
+            </div>
+            <div class="month">
+                <h2>Divine Encounter</h2>
+                <!-- <img src="img/GO.jpeg" alt="holyghost service" width="100px" height="100px"> -->
+                <p> <b>Date:</b> Every First Monday of the Month.</p>
+                <p><b>Venue:</b> Kilometer 46, Lagos-Ibadaan Expressway.</p>
+                <p><b>Time:</b> 8am</p>
+            </div>
+            <div class="month">
+                <h2>Shiloh Hour</h2>
+                <!-- <img src="img/GO.jpeg" alt="holyghost service" width="100px" height="100px"> -->
+                <p> <b>Date:</b> Every First Monday of the Month.</p>
+                <p><b>Venue:</b> Kilometer 46, Lagos-Ibadaan Expressway.</p>
+                <p><b>Time:</b> 10am</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <Footer>
+        <div class="foot">
+            <div class="final-links one">
+                <h2>Page Links</h2>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('event')}}">Events</a>
+                <a href="{{ url_for('faqs')}}">FAQs</a>
+            </div>
+            <div class="social one">
+                <h4>Contact Us</h4>
+                <p>Email : COE.RCCG@gmail.com</p>
+                <p>For Prayers Call: 0909303323, 01223233</p>
+                <p>Address: 1, Ire Agunfoye opposite Agunfoye primary school.</p>
+
+            </div>
+            <div class="subscription one">
+                <h2>Email</h2>
+                <p>Subscribe to our newsletter for upcoming events</p>
+                <form action="/About" method='POST'>
+                    <input type="text" name='email' class="foot" placeholder="Subcribe with your email">
+                    <p style="color:white; text-align:left;font-size:12px;"> {{ mess }}</p>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <p class="close">Copyright &copy; RCCG COE 2019</p>
+    </Footer>
+
+
+    <script>
+        function opennav() {
+            document.getElementById('nav').style.width = '80%';
+        }
+
+        function closenav() {
+            document.getElementById('nav').style.width = '0';
+        }
+    </script>
+
+</body>
+
+</html>

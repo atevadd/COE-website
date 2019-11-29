@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RCCG - City of Excellence Parish</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'img/rccg.png')}}" type="image/png">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header>
+            <h1>RCCG COE</h1>
+        </header>
+        <div class="nav" id="nav">
+            <a href="#" class="closebtn" onclick="closenav()">&cross;</a>
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{ url_for('about')}}">About</a>
+            <a href="{{ url_for('event')}}">Events</a>
+            <a href="{{ url_for('faqs')}}">FAQs</a>
+        </div>
+        <a href="#"><img src="{{ url_for('static', filename='img/menu.png')}}" alt="" onclick="opennav()"></a>
+
+        <div class="center">
+            <h1>Jesus is Lord</h1>
+            <!-- <a href="#">Get Started</a> -->
+        </div>
+    </div>
+
+    <div class="leaders">
+        <h2>Church Leadership</h2>
+        <div class="church">
+            <div class="leader">
+                <img src="{{ url_for('static', filename='img/GO.jpeg')}}" alt="" width="150px" height="150px">
+                <h3>Pastor E.A Adeboye</h3>
+                <p>General Overseer, Rccg Worldwide.</p>
+            </div>
+            <div class="leader">
+                <img src="{{ url_for('static', filename='img/MGO.jpeg')}}" alt="" width="150px" height="150px">
+                <h3>Pastor F.A Adeboye</h3>
+                <p>Mother-in-Isreal, Wife of General Overseer.</p>
+            </div>
+            <div class="leader">
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" alt="" width="150px" height="150px">
+                <h3>Pastor Nath Adejuwon</h3>
+                <p>Pastor-in-charge, Region 26</p>
+            </div>
+            <div class="leader">
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" alt="" width="150px" height="150px">
+                <h3>Pastor Godwin obadan</h3>
+                <p>Pastor-in-charge, Province 58</p>
+            </div>
+            <div class="leader last">
+                <img src="{{ url_for('static', filename='img/jb.jpg')}}" alt="" width="150px" height="150px">
+                <h3>Pastor J.B Adeniyi</h3>
+                <p>Pastor-in-charge, City of Excellence</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="celebrant-section">
+        <h1>This Month Celebrants</h1>
+        <div class="celebrants">
+            <div class="persons first">
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" alt="" width="100px" height="100px">
+                <h3>Bro John Doe</h3>
+                <p>20<sup>th</sup> December</p>
+            </div>
+            <div class="persons first">
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" alt="" width="100px" height="100px">
+                <h3>Bro John Doe</h3>
+                <p>20<sup>th</sup> December</p>
+            </div>
+            <div class="persons first">
+                <img src="{{ url_for('static', filename='img/rccg.png')}}" alt="" width="100px" height="100px">
+                <h3>Bro John Doe</h3>
+                <p>20<sup>th</sup> December</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-us">
+        <h1>Prayer Requests</h1>
+        <form action="/Index" method="POST">
+            <div class="form">
+                {% with messages = get_flashed_messages() %}
+                {%if messages %}
+                {%for message in messages %}
+                <p style="color:white; text-align:center;font-size:20px;">{{ message | safe }}</p>
+                {%endfor%}
+                {%endif%}
+                {%endwith%}
+
+                <label>Name</label>
+                <input type="text" name='name' placeholder="Enter your name">
+                <label>Prayer Request</label>
+                <textarea cols="30" rows="10" name='prayer' placeholder="Type in your prayer request"></textarea>
+                <button type="submit">Send Request</button>
+            </div>
+        </form>
+    </div>
+
+    <Footer>
+        <div class="foot">
+            <div class="final-links one">
+                <h2>Page Links</h2>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('event')}}">Events</a>
+                <a href="{{ url_for('faqs')}}">FAQs</a>
+            </div>
+            <div class="social one">
+                <h4>Contact Us</h4>
+                <p>Email : COE.RCCG@gmail.com</p>
+                <p>For Prayers Call: 0909303323, 01223233</p>
+                <p>Address: 1, Ire Agunfoye opposite Agunfoye primary school.</p>
+
+            </div>
+            <div class="subscription one">
+                <h2>Email</h2>
+                <p>Subscribe to our newsletter for upcoming events</p>
+                <form action="/About" method='POST'>
+                    <input type="text" name='email' class="foot" placeholder="Subcribe with your email">
+                    <!-- {% with mess = get_flashed_messages() %} -->
+                    <!-- {%if mess != ' '%} -->
+                    <!-- {% for m in mess%} -->
+                    <p style="color:white; text-align:left;font-size:12px;"> {{ mess }}</p>
+                    <!-- {% endfor %} -->
+                    <!-- {% endif %} -->
+                    <!-- {% endwith %} -->
+
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <p class="close">Copyright &copy; RCCG COE 2019</p>
+    </Footer>
+
+
+    <script>
+        function opennav() {
+            document.getElementById('nav').style.width = '70%';
+        }
+
+        function closenav() {
+            document.getElementById('nav').style.width = '0';
+        }
+    </script>
+</body>
+
+</html>
