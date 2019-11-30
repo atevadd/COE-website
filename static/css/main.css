@@ -269,7 +269,6 @@ footer {
 
 .one {
     flex: 1;
-    border: 1px solid black;
 }
 
 .final-links {
@@ -695,7 +694,6 @@ td {
 
     .one {
         padding: 1.5em;
-
     }
 
     .final-links a:hover {

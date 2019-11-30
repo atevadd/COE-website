@@ -42,25 +42,19 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/About/<string:mess>", methods=["GET", "POST"])
-def about(mess):
+@app.route("/About", methods=["GET", "POST"])
+def about():
     if request.method == 'POST':
-
-
-
-
-
-        
         email = request.form['email']
         if email == '':
             # flash('Enter a valid Email')
-            return redirect(url_for('index', mess="Subscription Successfully"))
+            return redirect(url_for('index'))
         else:
             data = Mail(email=email)
             db.session.add(data)
             db.session.commit()
             # flash("Subscription successful")
-            return redirect(url_for('index',  mess="Subscription Successfully"))
+            return redirect(url_for('index'))
     return render_template('about.html')
 
 @app.route("/Events")
