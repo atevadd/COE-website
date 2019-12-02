@@ -5,7 +5,12 @@
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
 }
-
+marquee{
+    padding:5px;
+    color: #180c62;
+    font-size:20px;
+    font-weight: 300;
+}
 .head {
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
@@ -269,6 +274,7 @@ footer {
 
 .one {
     flex: 1;
+    border-left:2px solid #111;
 }
 
 .final-links {
@@ -500,7 +506,9 @@ td {
     font-size: 2.6rem;
     text-transform: uppercase;
 }
-
+.celebrants .first img{
+    border-radius: 50%;
+}
 .week img {
     display: block;
     margin: 0% auto;
